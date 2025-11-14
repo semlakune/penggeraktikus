@@ -3,3 +3,5 @@
 .LSOverride
 .vscode
 .idea
+
+__pycache__/

@@ -1,0 +1,136 @@
+# Penggerak Tikus Configuration File
+# All durations are in seconds unless specified otherwise
+
+# ============================================================================
+# BASIC SETTINGS
+# ============================================================================
+
+# Idle timeout before automatic cursor movement starts (in seconds)
+idle_timeout: 300 # 5 minutes
+
+# Movement interval between each cursor move (in seconds)
+movement_interval: 0.5
+
+# Maximum range for random cursor movement (in pixels)
+movement_range: 100
+
+# Status update interval for progress messages (in seconds)
+status_update_interval: 30
+
+# ============================================================================
+# MOVEMENT PATTERNS
+# ============================================================================
+
+# Movement pattern to use
+# Options: random, circle, figure8, smooth, jiggle, human
+movement_pattern: random
+
+# Pattern-specific settings
+pattern_settings:
+  # Circle pattern
+  circle:
+    radius: 50
+    steps: 20
+
+  # Figure-8 pattern
+  figure8:
+    width: 100
+    height: 80
+    steps: 30
+
+  # Smooth wave pattern
+  smooth:
+    amplitude: 50
+    frequency: 0.1
+
+  # Jiggle pattern (small movements in place)
+  jiggle:
+    max_distance: 10
+
+  # Human-like pattern (random with acceleration)
+  human:
+    min_distance: 20
+    max_distance: 150
+    acceleration: 0.3
+
+# ============================================================================
+# DISPLAY SETTINGS
+# ============================================================================
+
+# Verbosity level
+# Options: quiet, normal, verbose
+verbosity: normal
+
+# Show emoji in output
+use_emoji: true
+
+# ============================================================================
+# SMART SCHEDULING
+# ============================================================================
+
+# Enable work hours only mode
+work_hours_only: false
+
+# Work hours (24-hour format)
+work_hours_start: "09:00"
+work_hours_end: "18:00"
+
+# Work days (0 = Monday, 6 = Sunday)
+work_days: [0, 1, 2, 3, 4] # Monday to Friday
+
+# Pause when screen is locked
+pause_when_locked: true
+
+# ============================================================================
+# ADAPTIVE BEHAVIOR
+# ============================================================================
+
+# Enable adaptive movement intervals
+adaptive_intervals: true
+
+# Adaptive interval settings
+adaptive_settings:
+  # When idle time < 10 minutes
+  short_idle:
+    threshold: 600
+    interval: 30
+
+  # When idle time < 30 minutes
+  medium_idle:
+    threshold: 1800
+    interval: 60
+
+  # When idle time >= 30 minutes
+  long_idle:
+    interval: 120
+
+# ============================================================================
+# MULTI-MONITOR SUPPORT
+# ============================================================================
+
+# Enable multi-monitor movement
+multi_monitor: true
+
+# Preferred monitor (0 = primary, -1 = all monitors)
+preferred_monitor: -1
+
+# ============================================================================
+# HOTKEYS
+# ============================================================================
+
+# Enable pause/resume hotkey
+enable_pause_hotkey: true
+
+# Pause/resume hotkey combination
+# Format: ctrl+shift+p, ctrl+alt+p, etc.
+pause_hotkey: "ctrl+shift+p"
+
+# ============================================================================
+# SYSTEM TRAY
+# ============================================================================
+
+# Enable system tray icon
+enable_system_tray: false
+
+# Start minimized to tray
+start_minimized: false
